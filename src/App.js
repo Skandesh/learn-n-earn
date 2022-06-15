@@ -66,7 +66,7 @@ function App() {
         console.log(account);
         //let nftTxn = await nftContract.mintNFT(1, { value: ethers.utils.parseEther("0.01") });
         let nftTxn = await nftContract.safeMint();//account, 1);
-        console.log("sending the value of the ether... please wait");
+        console.log("sending the value of TPG Tokens... please wait");
         await nftTxn.wait();
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
